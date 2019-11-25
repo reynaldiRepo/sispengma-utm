@@ -1,3 +1,14 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
 <div class="app-main__inner">
     <div class="app-page-title">
         <div class="page-title-wrapper">

@@ -1,3 +1,15 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
+
 <div class="app-page-title">
 	<div class="row">
 		<div class="col-md-6 col-xl-4">
@@ -10,7 +22,7 @@
 					<div class="widget-content-right">
 						<div class="widget-numbers text-white">
 							<span>
-								<a class="btn btn-info" href="<?= base_url("Admin/data_gedung")?>">
+								<a class="btn btn-info" href="<?= base_url("$mylevel/data_gedung")?>">
 									GO
 								</a>
 							</span>
@@ -28,7 +40,7 @@
 					</div>
 					<div class="widget-content-right">
 						<div class="widget-numbers text-white"><span>
-								<a class="btn btn-warning" href="<?= base_url("Admin/data_penghuni")?>">
+								<a class="btn btn-warning" href="<?= base_url("$mylevel/data_penghuni")?>">
 									GO
 								</a>
 							</span>
@@ -114,7 +126,7 @@
 							<h5 class="card-title">Tambah Musahil</h5>
 							<p>Pendaftaran & manajemen data Musahil asrama</p>
 							<center>
-							<a class="btn btn-primary" href="<?= base_url("Admin/data_musahil")?>" style="width:100%;"><i class="fa fa-plus"></i> MUSAHIL</a>
+							<a class="btn btn-primary" href="<?= base_url("$mylevel/data_musahil")?>" style="width:100%;"><i class="fa fa-plus"></i> MUSAHIL</a>
 							</center>                   
 						</div>
 					</div>

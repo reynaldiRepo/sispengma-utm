@@ -1,4 +1,14 @@
-
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
 <?= $this->session->flashdata('message'); ?>
 
 <div class="app-main__inner">
@@ -58,11 +68,11 @@
 									<td><?= $g->keterangan?></td>
 									<td><?= $g->Penghuni?></td>
 									<td>
-										<a href="<?= base_url("Admin/daftar_kamar/".$g->id_gedung)?>" class="btn btn-success">
+										<a href="<?= base_url("$mylevel/daftar_kamar/".$g->id_gedung)?>" class="btn btn-success">
 											Daftar Kamar
 										</a>
 										
-										<a href="<?= base_url("Admin/manage_gedung/".$g->id_gedung)?>" class="btn btn-info">
+										<a href="<?= base_url("$mylevel/manage_gedung/".$g->id_gedung)?>" class="btn btn-info">
 											Manage Gedung
 										</a>
 									</td>

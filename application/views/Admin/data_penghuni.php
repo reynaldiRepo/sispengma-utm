@@ -1,3 +1,14 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
 <div class="app-main__inner">
 	<div class="app-page-title">
 		<div class="page-title-wrapper">
@@ -23,7 +34,7 @@
 					</div>
 					<div class="widget-content-right">
 						<div class="widget-numbers text-white"><span>
-								<button class="btn btn-warning" onclick="window.location.href='<?= base_url('Admin/insert_penghuni')?>'">
+								<button class="btn btn-warning" onclick="window.location.href='<?= base_url('$mylevel/insert_penghuni')?>'">
 									GO
 								</button>
 							</span>
@@ -57,7 +68,7 @@
 									<td><?= $p->ket_jurusan?></td>
 									<td><?= $p->kamar?></td>
 									<td>
-										<a class="btn btn-info" href="<?= base_url("Admin/manage_penghuni/$p->nim")?>">
+										<a class="btn btn-info" href="<?= base_url("$mylevel/manage_penghuni/$p->nim")?>">
 											Manage Penghuni
 										</a>
 									</td>

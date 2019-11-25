@@ -1,3 +1,14 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
 <div class="app-main__inner">
     <div class="app-page-title">
         <div class="page-title-wrapper">
@@ -21,7 +32,7 @@
                         <?= $this->session->flashdata('message'); ?>
                         <h2 class="card-title">Masukan Musahil Baru</h2>
                         <div class="form-group">
-                            <?php echo form_open_multipart("Admin/add_musahil")?>
+                            <?php echo form_open_multipart("$mylevel/add_musahil")?>
                             <label>Nim Mahasiswa</label>
                             <input required type="text" class="form-control" name="nimMus" id="nimMus">
                             <br>

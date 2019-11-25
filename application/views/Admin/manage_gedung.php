@@ -1,3 +1,14 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
 <div class="app-main__inner">
     <div class="app-page-title">
         <div class="page-title-wrapper">
@@ -20,7 +31,7 @@
                     <div class="col-sm-12">
                         <h2 class="card-title">Manage Data Gedung</h2>
                         <div class="form-group">
-                            <?php echo form_open_multipart("Admin/update_gedung/".$gedung['id_gedung'])?>
+                            <?php echo form_open_multipart("$mylevel/update_gedung/".$gedung['id_gedung'])?>
                             <label>Kode Gedung</label>
                             <select required class="form-control" name="kode_gedung">
                             <option value="<?= $gedung['id_gedung']?>"><?= $gedung['id_gedung']?></option>
@@ -55,7 +66,7 @@
 function del(id) {
     var con = confirm("Delete This Data");
     if(con == true){
-        location.href="<?= base_url('Admin/delete_gedung/')?>"+id;
+        location.href="<?= base_url('$mylevel/delete_gedung/')?>"+id;
     }else{
         console.log("close");
     }

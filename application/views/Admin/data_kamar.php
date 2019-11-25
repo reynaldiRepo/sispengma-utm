@@ -1,3 +1,16 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
+
+
 
 <?= $this->session->flashdata('message'); ?>
 
@@ -56,7 +69,7 @@
 								<tr role="row" class="odd">
 									<td><?= $k->id_kamar?></td>
 									<td>
-										<?php echo form_open_multipart("Admin/update_kondisi/".$gedung."/".$k->id_kamar)?>
+										<?php echo form_open_multipart("$mylevel/update_kondisi/".$gedung."/".$k->id_kamar)?>
 										<select name ="kondisi" >
 											<?php foreach ($kondisi as $kon) { ?>
 												<option value = "<?= $kon->id_kondisi ?>"
@@ -70,7 +83,7 @@
 									</td>
 									<td><?= $k->penghuni?></td>
 									<td>
-										<a href="<?= base_url("Admin/daftar_penghuni_kamar/".$gedung."/".$k->id_kamar)?>" class="btn btn-success">
+										<a href="<?= base_url("$mylevel/daftar_penghuni_kamar/".$gedung."/".$k->id_kamar)?>" class="btn btn-success">
 											Daftar Penghuni
 										</a>
 										<button class="btn btn-info" <?php if($k->penghuni != 0){echo "disabled";}?>
@@ -94,7 +107,7 @@
 function del(id) {
     var con = confirm("Delete This Data");
     if(con == true){
-        location.href="<?= base_url('Admin/delete_kamar/'.$gedung.'/')?>"+id;
+        location.href="<?= base_url('$mylevel/delete_kamar/'.$gedung.'/')?>"+id;
     }else{
         console.log("close");
     }

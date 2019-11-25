@@ -1,3 +1,14 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
 <div class="app-main__inner">
 	<div class="app-page-title">
 		<div class="page-title-wrapper">
@@ -20,7 +31,7 @@
 					<div class="col-sm-12">
 						<?= $this->session->flashdata('message'); ?>
 						<h2 class="card-title">Manage Data Musahil</h2>
-						<?php echo form_open_multipart("Admin/reset_password_mus/".$musahil['nim']."/".$musahil['uname']) ?>
+						<?php echo form_open_multipart("$mylevel/reset_password_mus/".$musahil['nim']."/".$musahil['uname']) ?>
 						<table class="table table-striped">
 							<tr>
 								<th>Username</th>
@@ -35,7 +46,7 @@
 								<td><?= $musahil['ket_jurusan']?></td>
 							</tr>
 							<tr>
-								<th colspan = "2"><span onclick="del('<?= base_url('admin/delete_musahil/'.$musahil['nim_musahil'].'/'.$musahil['uname'])?>')" class="btn btn-danger" style="width:100%">Delete Musahil</span></th>
+								<th colspan = "2"><span onclick="del('<?= base_url('$mylevel/delete_musahil/'.$musahil['nim_musahil'].'/'.$musahil['uname'])?>')" class="btn btn-danger" style="width:100%">Delete Musahil</span></th>
 							</tr>
                             <tr>
 								<th colspan="2" class="bg-warning"> 

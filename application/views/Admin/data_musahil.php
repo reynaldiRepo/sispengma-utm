@@ -1,3 +1,15 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
+
 <div class="app-main__inner">
 	<div class="app-page-title">
 		<div class="page-title-wrapper">
@@ -23,7 +35,7 @@
 					</div>
 					<div class="widget-content-right">
 						<div class="widget-numbers text-white"><span>
-								<a class="btn btn-warning" href="<?= base_url("Admin/insert_musahil")?>">
+								<a class="btn btn-warning" href="<?= base_url("$mylevel/insert_musahil")?>">
 									GO
 								</a>
 							</span>
@@ -56,7 +68,7 @@
 									<td><?= $m->nama?></td>
 									<td><?= $m->ket_jurusan?></td>
 									<td>
-										<a href="<?= base_url("Admin/manage_musahil/".$m->nim)?>" class="btn btn-info">
+										<a href="<?= base_url("$mylevel/manage_musahil/".$m->nim)?>" class="btn btn-info">
 											Manage Musahil
 										</a>
 									</td>

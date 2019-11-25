@@ -1,3 +1,14 @@
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
 <div class="app-main__inner">
 	<div class="app-page-title">
 		<div class="page-title-wrapper">
@@ -20,7 +31,7 @@
 					<div class="col-sm-12">
 						<?= $this->session->flashdata('message'); ?>
 						<h2 class="card-title">Manage Data Penghuni</h2>
-						<?php echo form_open_multipart("Admin/update_kamar_penghuni/".$penghuni['nim']) ?>
+						<?php echo form_open_multipart("$mylevel/update_kamar_penghuni/".$penghuni['nim']) ?>
 						<table class="table table-striped">
 							<tr>
 								<th>NIM</th>
@@ -76,7 +87,7 @@
 	function del(id) {
 		var con = confirm("Delete This Data");
 		if(con == true){
-			location.href="<?= base_url('Admin/delete_penghuni/')?>"+id;
+			location.href="<?= base_url('$mylevel/delete_penghuni/')?>"+id;
 		}else{
 			console.log("close");
 			}
