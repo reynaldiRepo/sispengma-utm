@@ -6,6 +6,6 @@ $route['logout'] = 'asrama/logout';
 $route['admin'] = 'admin/(:any)';
 $route['user'] = 'user/(:any)';
 $route['musahil'] = 'musahil/(:any)';
-$route['musahil/insert_penghuni'] = 'Admin/insert_penghuni';
+$route['musahil/(:any)'] = 'admin/(:any)';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
