@@ -29,7 +29,47 @@ $mylevel = "Admin";
             <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
                 <div class="row">
                     <div class="col-sm-12">
-                        <table>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        NIM
+                                    </th>
+                                    <th>
+                                        Nama
+                                    </th>
+                                    <th>
+                                        Prodi
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        Manage Pendaftar
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($pendaftar as $pend){ ?>
+                                <tr>
+                                    <td>
+                                        <?= $pend->nim?>
+                                    </td>
+                                    <td>
+                                        <?= $pend->nama?>
+                                    </td>
+                                    <td>
+                                        <?= $pend->ket_jurusan?>
+                                    </td>
+                                    <td>
+                                        <?php if($pend->masuk == "NOT"){echo "Belum Dapat Kamar";}else{echo "Sudah Dapat Kamaar";}?>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-info">Manage Pendaftar</button>
+                                    </td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
                         </table>
                     </div>
                 </div>

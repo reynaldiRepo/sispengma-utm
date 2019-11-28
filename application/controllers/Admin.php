@@ -424,7 +424,7 @@ class Admin extends CI_Controller
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $data['pendaftar'] = $this->am->get_pendaftar_full();
         $this->load->view('dash_header', $data);
-        $this->load->view("admin/get_token",$data);
+        $this->load->view("admin/data_pendaftaran",$data);
         $this->load->view('dash_footer');
     }
 

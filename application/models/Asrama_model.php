@@ -141,7 +141,8 @@ class Asrama_model extends CI_Model{
     }
 
     public function get_pendaftar_full(){
-        $sql = "SELECT *, IF(tbl_pendaftaran.nim IN (SELECT tbl_penghuni_tetap.nim FROM tbl_penghuni_tetap), 'IN', 'NOT') as 'masuk' FROM tbl_pendaftaran  
+        $sql = "SELECT *, IF(tbl_pendaftaran.nim IN (SELECT tbl_penghuni_tetap.nim FROM tbl_penghuni_tetap), 'IN', 'NOT') as 'masuk' FROM tbl_pendaftaran, tbl_jurusan 
+        where tbl_jurusan.id_jurusan = tbl_pendaftaran.id_jurusan
         ORDER BY `masuk`  DESC";
         $data = $this->db->query($sql)->result();
         return $data;
