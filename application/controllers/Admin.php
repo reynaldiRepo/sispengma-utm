@@ -69,7 +69,7 @@ class Admin extends CI_Controller
             array_push($data['list_ged'],$ged->id_gedung);
         }
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/dataGedung", $data);
+        $this->load->view("admin/dataGedung", $data);
         $this->load->view('dash_footer',$data);
     }
 
@@ -93,7 +93,7 @@ class Admin extends CI_Controller
             array_push($data['list_ged'],$ged->id_gedung);
         }
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/manage_gedung", $data);
+        $this->load->view("admin/manage_gedung", $data);
         $this->load->view('dash_footer',$data);
     }
 
@@ -121,7 +121,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/data_kamar", $data);
+        $this->load->view("admin/data_kamar", $data);
         $this->load->view('dash_footer',$data);
     }
 
@@ -144,7 +144,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/data_penghuni_kamar", $data);
+        $this->load->view("admin/data_penghuni_kamar", $data);
         $this->load->view('dash_footer',$data);
         
     }
@@ -179,7 +179,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/editProfile",$data);
+        $this->load->view("admin/editProfile",$data);
         $this->load->view('dash_footer');
         
     }
@@ -190,7 +190,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/managePassword",$data);
+        $this->load->view("admin/managePassword",$data);
         $this->load->view('dash_footer');
     }
 
@@ -220,7 +220,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/data_penghuni",$data);
+        $this->load->view("admin/data_penghuni",$data);
         $this->load->view('dash_footer');
     }
 
@@ -232,7 +232,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/data_musahil",$data);
+        $this->load->view("admin/data_musahil",$data);
         $this->load->view('dash_footer');
     }
 
@@ -242,7 +242,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/insert_musahil",$data);
+        $this->load->view("admin/insert_musahil",$data);
         $this->load->view('dash_footer',$data);
     }
 
@@ -301,7 +301,7 @@ class Admin extends CI_Controller
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $data['musahil'] = $this->am->get_musahil_detail($nim);
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/manage_musahil",$data);
+        $this->load->view("admin/manage_musahil",$data);
         $this->load->view('dash_footer',$data);
     }
 
@@ -339,7 +339,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/data_admin",$data);
+        $this->load->view("admin/data_admin",$data);
         $this->load->view('dash_footer');
     }
 
@@ -350,7 +350,7 @@ class Admin extends CI_Controller
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $data['kamar'] = $this->am->get_kamar_layak();
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/insert_penghuni",$data);
+        $this->load->view("admin/insert_penghuni",$data);
         $this->load->view('dash_footer',$data);
     }
 
@@ -362,7 +362,7 @@ class Admin extends CI_Controller
         $data['penghuni'] = $this->am->get_penghuni_detail($nim);
         $data['kamar'] = $this->am->get_kamar_layak();
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/manage_penghuni",$data);
+        $this->load->view("admin/manage_penghuni",$data);
         $this->load->view('dash_footer',$data);
     }
 
@@ -417,13 +417,24 @@ class Admin extends CI_Controller
 
     }
 
+    public function data_pendaftaran(){
+        $this->cek_session();
+        $data['menu'] = "Data Pendaftaran";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $data['pendaftar'] = $this->am->get_pendaftar_full();
+        $this->load->view('dash_header', $data);
+        $this->load->view("admin/get_token",$data);
+        $this->load->view('dash_footer');
+    }
+
     public function get_token(){
         $this->cek_session();
         $data['menu'] = "Get Token";
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view($this->cek_level()."/get_token",$data);
+        $this->load->view("admin/get_token",$data);
         $this->load->view('dash_footer');
     }
 

@@ -140,6 +140,13 @@ class Asrama_model extends CI_Model{
         return $data;
     }
 
+    public function get_pendaftar_full(){
+        $sql = "SELECT *, IF(tbl_pendaftaran.nim IN (SELECT tbl_penghuni_tetap.nim FROM tbl_penghuni_tetap), 'IN', 'NOT') as 'masuk' FROM tbl_pendaftaran  
+        ORDER BY `masuk`  DESC";
+        $data = $this->db->query($sql)->result();
+        return $data;
+    }
+
     public function insert_penghuni(){
         $data['nim'] = $this->input->post("nim");
         $data['kamar'] = $this->input->post("kamar");
