@@ -63,7 +63,7 @@ $mylevel = "Admin";
                                         <?= $pend->ket_jurusan?>
                                     </td>
                                     <td>
-                                        <?php if($pend->masuk == "NOT"){echo "<i class='text text-warning'>Belum Dapat Kamar</i>";}else{echo "<i class='text text-success'>Sudah Dapat Kamaar</i>";}?>
+                                        <?php if($pend->masuk == "NOT"){echo "<i class='text text-warning'>Belum Dapat Kamar</i>";}else{echo "<i class='text text-success '>Sudah Dapat Kamaar</i>";}?>
                                     </td>
                                     <td>
                                         <button class="btn btn-info">Manage Pendaftar</button>
