@@ -515,7 +515,75 @@ class Admin extends CI_Controller
 
     }
 
-    
+    public function view_file(){
+        $this->cek_session();
+        $dir = './uploaded/news_image/';
+        $data['file'] = array_diff(scandir($dir), array('.', '..', 'index.html'));
+        $data['menu'] = "Manage File";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $this->load->view('dash_header', $data);
+        $this->load->view("admin/data_file",$data);
+        $this->load->view('dash_footer');
+
+    }
+
+
+    public function upload_file($name,$form_name){
+		$config['upload_path']   = './uploaded/news_image/'; 
+		$config['allowed_types'] = 'gif|jpg|png|jpeg|pdf|doc|txt'; 
+		$config['max_size'] = 2000;
+		$config['file_name'] = $name."_f_".uniqid();
+		$config['overwrite'] = true;
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config); 
+		if ( !$this->upload->do_upload($form_name)) { 
+            return false;	
+        }else{
+			$array = explode('.', $_FILES[$form_name]['name']);
+			$extension = end($array);  
+            return $config['file_name'].'.'.$extension;
+        }
+    }
+
+    public function up_file(){
+        $this->cek_session();
+        $name = $this->input->post("file_name");
+        $upload = $this->upload_file($name, "file");
+        if($upload != false){
+            $this->session->set_flashdata('message', "
+            <script>alert('Berhasil Upload File')</script>
+            <div class='alert alert-success'>File berhasil diupload</div>
+            ");
+            redirect("Admin/view_file");
+        }else{
+            $this->session->set_flashdata('message', "
+            <script>alert('Gagal Upload File')</script>
+            <div class='alert alert-danger'>Gagal Upload File</div>
+            ");
+            redirect("Admin/view_file"); 
+        }
+
+    }
+
+    public function delete_file($file){
+        $this->cek_session();
+        $file_name = './uploaded/news_image/'.$file;
+        if(unlink($file_name)){
+            $this->session->set_flashdata('message', "
+            <script>alert('Berhasil Hapus File')</script>
+            <div class='alert alert-success'>File berhasil dihapus</div>
+            ");
+            redirect("Admin/view_file");
+        }else{
+            $this->session->set_flashdata('message', "
+            <script>alert('Gagal Hapus File')</script>
+            <div class='alert alert-danger'>Gagal Hapus File</div>
+            ");
+            redirect("Admin/view_file"); 
+        }
+
+    }
 
    
 

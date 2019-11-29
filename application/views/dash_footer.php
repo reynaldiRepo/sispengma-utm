@@ -12,6 +12,20 @@
 </div>
 </div>
 
+
+<?php 
+if($level == 100){
+$mylevel = "User";
+}
+if($level == 999){
+$mylevel = "Musahil";
+}
+if($level == 1337){
+$mylevel = "Admin";
+}
+?>
+
+
 <!-- modal logout -->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 	style="display: none;" aria-hidden="true">
@@ -161,6 +175,43 @@
 					</tbody>
 				</table>
 			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =============================== -->
+
+
+
+<!-- modal upload file -->
+<div class="modal fade" id="uploadFile" tabindex="-2" role="form" aria-labelledby="exampleModalLabel"
+	style="display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Upload File</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<?php echo form_open_multipart("$mylevel/up_file")?>
+			<div class="modal-body">
+				<div class="form-group">
+					<label>Name File</label>
+					<input type="text" class="form-control" name="file_name" required>
+				</div>
+				<div class="form-group">
+					<label>Choose File</label>
+					<input type="file" class="form-control" name="file" required>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-info form-control">Upload File</button>
+				</div>
+			</div>
+			</form>
+
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 			</div>

@@ -470,12 +470,21 @@
 					<div class="app-sidebar__inner">
 						<ul class="vertical-nav-menu">
 							<li class="app-sidebar__heading">Menu</li>
+							
+							<li class="hyper">
+								<a href="<?= base_url("Asrama/")?>">
+									<i class="metismenu-icon pe-7s-news-paper">
+									</i>News
+								</a>
+							</li>
+							
 							<li class="hyper">
 								<a href="<?= base_url($mylevel."/")?>">
 									<i class="metismenu-icon pe-7s-display1">
 									</i>Dashboard
 								</a>
 							</li>
+							
 							<?php
 							if ($level != 1337){?>
 							<li class="hyper" id="profile">
@@ -530,7 +539,7 @@
 								</a>
 							</li>
 							<li class="hyper" id="data_admin">
-								<a href="<?= base_url($mylevel."/upload_file")?>">
+								<a href="<?= base_url($mylevel."/view_file")?>">
 									<i class="metismenu-icon pe-7s-upload">
 									</i>Upload File
 								</a>
