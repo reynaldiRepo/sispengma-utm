@@ -333,16 +333,6 @@ class Admin extends CI_Controller
 
     }
 
-    public function data_admin(){
-        $this->cek_session();
-        $data['menu'] = "Data Admin";
-        $data['level'] = $this->session->userdata('id_level');
-        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
-        $this->load->view('dash_header', $data);
-        $this->load->view("admin/data_admin",$data);
-        $this->load->view('dash_footer');
-    }
-
     public function insert_penghuni(){
         $this->cek_session();
         $data['menu'] = "Input Penghuni Baru";
@@ -435,6 +425,16 @@ class Admin extends CI_Controller
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
         $this->load->view("admin/get_token",$data);
+        $this->load->view('dash_footer');
+    }
+
+    public function post_data(){
+        $this->cek_session();
+        $data['menu'] = "Data Admin";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $this->load->view('dash_header', $data);
+        $this->load->view("admin/data_admin",$data);
         $this->load->view('dash_footer');
     }
 

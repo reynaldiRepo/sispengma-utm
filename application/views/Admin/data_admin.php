@@ -19,7 +19,7 @@ $mylevel = "Admin";
                     </i>
                 </div>
                 <div><?= $menu ?>
-                    <div class="page-title-subheading">Data Administrator
+                    <div class="page-title-subheading">Post Data
                     </div>
                 </div>
             </div>

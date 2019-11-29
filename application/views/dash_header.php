@@ -520,7 +520,7 @@
 								</a>
 							</li>
 							<li class="hyper" id="data_admin">
-								<a href="<?= base_url($mylevel."/edit_profile")?>">
+								<a href="<?= base_url($mylevel."/post_data")?>">
 									<i class="metismenu-icon pe-7s-news-paper">
 									</i>Data Berita
 								</a>
