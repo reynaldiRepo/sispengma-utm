@@ -33,7 +33,7 @@ $mylevel = "Admin";
                         <?php echo form_open_multipart("$mylevel/add_post")?>
                         <div class="form-group">
                             <label>
-                                judul post
+                                judul Post
                             </label>
                             <input type="text" name="judul" class="form-control" required>
                         </div>
