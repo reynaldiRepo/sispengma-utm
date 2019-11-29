@@ -510,12 +510,6 @@
 									</i>Data Gedung
 								</a>
 							</li>
-							<li class="hyper" id="data_admin">
-								<a href="<?= base_url($mylevel."/edit_profile")?>">
-									<i class="metismenu-icon pe-7s-star">
-									</i>Data Admin
-								</a>
-							</li>
 							<?php } 
 							if ($level != "100" ){
 							?>
@@ -523,6 +517,12 @@
 								<a href="<?= base_url($mylevel."/data_pendaftaran")?>">
 									<i class="metismenu-icon pe-7s-file">
 									</i>Data Pendaftar
+								</a>
+							</li>
+							<li class="hyper" id="data_admin">
+								<a href="<?= base_url($mylevel."/edit_profile")?>">
+									<i class="metismenu-icon pe-7s-news-paper">
+									</i>Data Berita
 								</a>
 							</li>
 							<?php } ?>
