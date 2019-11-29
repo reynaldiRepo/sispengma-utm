@@ -433,9 +433,63 @@ class Admin extends CI_Controller
         $data['menu'] = "Data Berita";
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $data['berita'] = $this->am->get_berita();
         $this->load->view('dash_header', $data);
         $this->load->view("admin/data_berita",$data);
         $this->load->view('dash_footer');
+    }
+
+    public function post_detail($id_berita){
+        $this->cek_session();
+        $data['menu'] = "Update Berita";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $data['berita'] = $this->am->get_berita_detail(($id_berita));
+        $this->load->view('dash_header', $data);
+        $this->load->view("admin/update_berita",$data);
+        $this->load->view('dash_footer');
+    }
+
+    public function update_post($id_berita){
+        $this->cek_session();
+        $update = $this->am->update_berita($id_berita);
+        if($update){
+            $this->session->set_flashdata('message', "
+            <script>alert('Berita Berhasil Update')</script>
+            <div class='alert alert-success'>Berita berhasil diupdate</div>
+            ");
+            redirect("Admin/post_data");
+        }else{
+            $this->session->set_flashdata('message', "
+            <script>alert('Berita gagal diupdate')</script>
+            <div class='alert alert-danger'>Berita gagal diupdate</div>
+            ");
+            redirect("Admin/post_data");
+        }
+    }
+
+    public function delete_berita($id_berita){
+        $this->am-->cek_session();
+        
+    }
+
+    public function add_post(){
+        $this->cek_session();
+        $add = $this->am->add_berita();
+        if($add) {
+            $this->session->set_flashdata('message', "
+            <script>alert('Berita Berhasil Ditambah')</script>
+            <div class='alert alert-success'>Berita berhasil ditambah</div>
+            ");
+            redirect("Admin/post_data");
+        }else{
+            $this->session->set_flashdata('message', "
+            <script>alert('Berita Gagal Ditambah')</script>
+            <div class='alert alert-danger'>Berita gagal ditambah</div>
+            ");
+            redirect("Admin/post_data");
+        }
+
     }
 
     

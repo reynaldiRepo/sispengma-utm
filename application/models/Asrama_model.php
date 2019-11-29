@@ -189,6 +189,45 @@ class Asrama_model extends CI_Model{
     }
 
 
+    // ===========================model berita================================/
+    public function get_berita(){
+        $data = $this->db->get("berita")->result();
+        return $data;
+    }
+
+    public function add_berita(){
+        $data['id_berita'] = '';
+        $data['judul_berita'] = $this->input->post("judul");
+        $data['date_post'] = date(" d F Y");
+        $data['isi'] = $this->input->post("isi");
+        $insert = $this->db->insert("berita", $data);
+        return $insert;
+    }
+
+    public function get_berita_detail($id_berita){
+        $data = $this->db->get_where("berita", array("id_berita"=>$id_berita))->row_array();
+        return $data;
+    }
+
+    public function update_berita($id_berita){
+        $data['id_berita'] = '';
+        $data['judul_berita'] = $this->input->post("judul");
+        // $data['date_post'] = date(" d F Y");
+        $data['isi'] = $this->input->post("isi");
+        $this->db->where("id_berita", $id_gedung);
+        $update = $this->db->update("berita", $data);
+        return $update;
+    }
+
+    public function delete_berita($id_berita){
+        $this->db->where("id_berita", $id_berita);
+        $delete = $this->db->delete("berita");
+    }
+
+    // ===========================model berita================================/
+
+
+
 
     
   
