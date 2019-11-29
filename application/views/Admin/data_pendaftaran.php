@@ -29,7 +29,8 @@ $mylevel = "Admin";
             <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
                 <div class="row">
                     <div class="col-sm-12">
-                        <table class="table table-striped">
+                    <table style="width: 100%;" id="example"
+							class="table table-hover table-striped table-bordered dataTable dtr-inline">
                             <thead>
                                 <tr>
                                     <th>
@@ -62,7 +63,7 @@ $mylevel = "Admin";
                                         <?= $pend->ket_jurusan?>
                                     </td>
                                     <td>
-                                        <?php if($pend->masuk == "NOT"){echo "Belum Dapat Kamar";}else{echo "Sudah Dapat Kamaar";}?>
+                                        <?php if($pend->masuk == "NOT"){echo "<i class='text text-warning'>Belum Dapat Kamar</i>";}else{echo "<i class='text text-success'>Sudah Dapat Kamaar</i>";}?>
                                     </td>
                                     <td>
                                         <button class="btn btn-info">Manage Pendaftar</button>
@@ -77,4 +78,4 @@ $mylevel = "Admin";
         </div>
     </div>
 </div>
-<script type="text/javascript" src="<?= base_url('assets/'); ?>assets/scripts/main.js"></script>
+

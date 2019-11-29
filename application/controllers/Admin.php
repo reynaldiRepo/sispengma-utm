@@ -425,7 +425,7 @@ class Admin extends CI_Controller
         $data['pendaftar'] = $this->am->get_pendaftar_full();
         $this->load->view('dash_header', $data);
         $this->load->view("admin/data_pendaftaran",$data);
-        $this->load->view('dash_footer');
+        $this->load->view('dash_footer',$data);
     }
 
     public function get_token(){
