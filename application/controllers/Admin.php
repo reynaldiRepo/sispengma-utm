@@ -430,11 +430,11 @@ class Admin extends CI_Controller
 
     public function post_data(){
         $this->cek_session();
-        $data['menu'] = "Data Admin";
+        $data['menu'] = "Data Berita";
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $this->load->view('dash_header', $data);
-        $this->load->view("admin/data_admin",$data);
+        $this->load->view("admin/data_berita",$data);
         $this->load->view('dash_footer');
     }
 
