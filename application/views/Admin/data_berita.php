@@ -51,6 +51,7 @@ $mylevel = "Admin";
             <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
                 <div class="row">
                     <div class="col-sm-12">
+                    <?= $this->session->flashdata('message'); ?>
                     <table style="width: 100%;" id="example"
                             class="table table-hover table-striped table-bordered dataTable dtr-inline">
                         <thead>
@@ -78,9 +79,12 @@ $mylevel = "Admin";
                                 </td>
                                 <td class="d-block">
                                     <center>
-                                    <a class = "btn btn-warning mb-2 text text-white" style="width : 100%" >View</a><br>
-                                    <a class = "btn btn-info mb-2 text text-white" style="width : 100%" >Update</a><br>
-                                    <a class = "btn btn-danger text text-white" style="width : 100%" >Delete</a><br>
+                                    <a href="<?= base_url("$mylevel/view_post/$ber->id_berita")?>"
+                                     class = "btn btn-warning mb-2 text text-white" style="width : 100%" >View</a><br>
+                                    <a href="<?= base_url("$mylevel/post_detail/$ber->id_berita")?>"
+                                     class = "btn btn-info mb-2 text text-white" style="width : 100%" >Update</a><br>
+                                    <button onclick = "del('<?= $ber->id_berita?>')" 
+                                    class = "btn btn-danger text text-white" style="width : 100%" >Delete</button><br>
                                     </center>
                                 </td>
                             </tr>
@@ -94,4 +98,15 @@ $mylevel = "Admin";
         </div>
     </div>
 </div>
+
+<script>
+function del(id) {
+    var con = confirm("Delete This Data");
+    if(con == true){
+        location.href="<?= base_url("$mylevel/delete_berita/")?>"+id;
+    }else{
+        console.log("close");
+    }
+}
+</script>
 

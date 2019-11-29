@@ -210,13 +210,11 @@ class Asrama_model extends CI_Model{
     }
 
     public function update_berita($id_berita){
-        $data['id_berita'] = '';
         $data['judul_berita'] = $this->input->post("judul");
-        // $data['date_post'] = date(" d F Y");
         $data['isi'] = $this->input->post("isi");
-        $this->db->where("id_berita", $id_gedung);
+        $this->db->where("id_berita", $id_berita);
         $update = $this->db->update("berita", $data);
-        return $update;
+        return true;
     }
 
     public function delete_berita($id_berita){

@@ -446,7 +446,7 @@ class Admin extends CI_Controller
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $data['berita'] = $this->am->get_berita_detail(($id_berita));
         $this->load->view('dash_header', $data);
-        $this->load->view("admin/update_berita",$data);
+        $this->load->view("admin/update_post",$data);
         $this->load->view('dash_footer');
     }
 
@@ -469,7 +469,7 @@ class Admin extends CI_Controller
     }
 
     public function delete_berita($id_berita){
-        $this->am-->cek_session();
+        $this->cek_session();
         $delete = $this->am->delete_berita($id_berita);
         if($delete) {
             $this->session->set_flashdata('message', "
@@ -479,8 +479,8 @@ class Admin extends CI_Controller
             redirect("Admin/post_data");
         }else{
             $this->session->set_flashdata('message', "
-            <script>alert('Berita Gagal Dihapus')</script>
-            <div class='alert alert-danger'>Berita gagal dihapus</div>
+            <script>alert('Berita Berhasil Dihapus')</script>
+            <div class='alert alert-warning'>Berita Berhasil dihapus</div>
             ");
             redirect("Admin/post_data");
         }
