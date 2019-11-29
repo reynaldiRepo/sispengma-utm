@@ -13,7 +13,10 @@
 	<meta name="msapplication-tap-highlight" content="no">
 
 	<link href="<?= base_url('assets/') ?>main.css" rel="stylesheet">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="<?= base_url("vendor/ckeditor")?>/ckeditor.js"></script>
+	<script src="<?= base_url("vendor/ckeditor/samples/")?>js/sample.js"></script>
+	<!-- <link rel="stylesheet" href="<?= base_url("vendor/ckeditor/samples/")?>css/samples.css"> -->
 </head>
 <body>
 	<div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
@@ -519,10 +522,17 @@
 									</i>Data Pendaftar
 								</a>
 							</li>
+							<li class="app-sidebar__heading">News Section</li>
 							<li class="hyper" id="data_admin">
 								<a href="<?= base_url($mylevel."/post_data")?>">
 									<i class="metismenu-icon pe-7s-news-paper">
 									</i>Data Berita
+								</a>
+							</li>
+							<li class="hyper" id="data_admin">
+								<a href="<?= base_url($mylevel."/upload_file")?>">
+									<i class="metismenu-icon pe-7s-upload">
+									</i>Upload File
 								</a>
 							</li>
 							<?php } ?>

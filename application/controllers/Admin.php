@@ -470,7 +470,30 @@ class Admin extends CI_Controller
 
     public function delete_berita($id_berita){
         $this->am-->cek_session();
-        
+        $delete = $this->am->delete_berita($id_berita);
+        if($delete) {
+            $this->session->set_flashdata('message', "
+            <script>alert('Berita Berhasil Dihapus')</script>
+            <div class='alert alert-success'>Berita berhasil dihapus</div>
+            ");
+            redirect("Admin/post_data");
+        }else{
+            $this->session->set_flashdata('message', "
+            <script>alert('Berita Gagal Dihapus')</script>
+            <div class='alert alert-danger'>Berita gagal dihapus</div>
+            ");
+            redirect("Admin/post_data");
+        }
+    }
+
+    public function tambah_berita(){
+        $this->cek_session();
+        $data['menu'] = "Tambah Berita Berita";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $this->load->view('dash_header', $data);
+        $this->load->view("admin/add_post",$data);
+        $this->load->view('dash_footer');
     }
 
     public function add_post(){

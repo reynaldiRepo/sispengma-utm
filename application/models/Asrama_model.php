@@ -198,7 +198,7 @@ class Asrama_model extends CI_Model{
     public function add_berita(){
         $data['id_berita'] = '';
         $data['judul_berita'] = $this->input->post("judul");
-        $data['date_post'] = date(" d F Y");
+        $data['post_date'] = date(" d F Y");
         $data['isi'] = $this->input->post("isi");
         $insert = $this->db->insert("berita", $data);
         return $insert;
