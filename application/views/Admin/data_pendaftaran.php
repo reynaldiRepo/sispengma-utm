@@ -45,9 +45,11 @@ $mylevel = "Admin";
                                     <th>
                                         Status
                                     </th>
+                                    <?php if ($level=="1337") { ?>
                                     <th>
                                         Manage Pendaftar
                                     </th>
+                                    <?php } ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,9 +67,11 @@ $mylevel = "Admin";
                                     <td>
                                         <?php if($pend->masuk == "NOT"){echo "<i class='text text-warning'>Belum Dapat Kamar</i>";}else{echo "<i class='text text-success '>Sudah Dapat Kamaar</i>";}?>
                                     </td>
+                                    <?php if ($level=="1337") { ?>
                                     <td>
                                         <button class="btn btn-info">Manage Pendaftar</button>
                                     </td>
+                                    <?php } ?>
                                 </tr>
                                 <?php } ?>
                             </tbody>

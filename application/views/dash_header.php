@@ -501,7 +501,7 @@
 								</a>
 							</li>
 							<?php if($level != 100){?>
-							<li class="app-sidebar__heading">Manage Data</li>
+							<li class="app-sidebar__heading">Data</li>
 							<?php } ?>
 							<?php if ($level == 1337) { ?>
 							<li class="hyper" id="data_penghuni">
@@ -516,12 +516,7 @@
 									</i>Data Musahil
 								</a>
 							</li>
-							<li class="hyper" id="data_gedung">
-								<a href="<?= base_url($mylevel."/data_gedung")?>">
-									<i class="metismenu-icon pe-7s-home">
-									</i>Data Gedung
-								</a>
-							</li>
+							
 							<?php } 
 							if ($level != "100" ){
 							?>
@@ -531,6 +526,15 @@
 									</i>Data Pendaftar
 								</a>
 							</li>
+							<li class="hyper" id="data_gedung">
+								<a href="<?= base_url($mylevel."/data_gedung")?>">
+									<i class="metismenu-icon pe-7s-home">
+									</i>Data Gedung
+								</a>
+							</li>
+							<?php } ?>
+
+							<?php if ($level == "1337"){ ?>
 							<li class="app-sidebar__heading">News Section</li>
 							<li class="hyper" id="data_admin">
 								<a href="<?= base_url($mylevel."/post_data")?>">

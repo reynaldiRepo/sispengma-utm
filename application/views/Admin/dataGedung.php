@@ -26,6 +26,7 @@ $mylevel = "Admin";
 			</div>
 		</div>
 	</div>
+	<?php if ($level == "1337"){ ?>
 	<div class="row">
 		<div class="col-md-4 col-xl-4">
 			<div class="card mb-2 widget-content bg-midnight-bloom">
@@ -46,6 +47,7 @@ $mylevel = "Admin";
 			</div>
 		</div>
 	</div>
+	<?php } ?>
 	<div class="main-card mb-3 card">
 		<div class="card-body">
 			<div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
@@ -72,9 +74,11 @@ $mylevel = "Admin";
 											Daftar Kamar
 										</a>
 										
+										<?php if ($level == "1337"){ ?>
 										<a href="<?= base_url("$mylevel/manage_gedung/".$g->id_gedung)?>" class="btn btn-info">
 											Manage Gedung
 										</a>
+										<?php } ?>
 									</td>
 								</tr>
 								<?php } ?>
