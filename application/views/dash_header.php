@@ -64,9 +64,13 @@
 									<div class="btn-group">
 										<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
 											class="p-0 btn">
-											<img width="42" height="40" class="rounded-circle"
+											<?php if($level != "null"){ ?>
+												<img width="42" height="40" class="rounded-circle"
 												src="<?= base_url('uploaded/') ?>photoProfile/<?= $user['photo']?>"
 												alt="">
+												<?php }else{ ?>
+												<i class="text text-warning text-lg widget-heading" style="font-size : 16px">Login</i>
+												<?php } ?>
 											<i class="fa fa-angle-down ml-2 opacity-8"></i>
 										</a>
 										<div tabindex="-1" role="menu" aria-hidden="true"
@@ -77,26 +81,39 @@
 														<div class="widget-content p-2 bg-light">
 															<div class="widget-content-wrapper p-2 bg-light">
 																<div class="widget-content-left">
+																	<?php if($level != "null") {?>
 																	<div class="widget-heading">
 																		<?= $user['username']?>
 																	</div>
 																	<div class="widget-subheading opacity-8">
 																		<?= $user['ket_level']?>
 																	</div>
+																	<?php }else{ ?>
+																	<div class="widget-heading">
+																		Login 
+																	</div>
+																	<?php } ?>
 																</div>
 																<div class="widget-content-right mr-2">
+																	<?php if($level != "null") { ?>
 																	<button type="button"
 																		class="btn-pill btn-shadow btn-shine btn btn-focus"
 																		data-toggle="modal"
 																		data-target="#logoutModal">Logout
 																	</button>
+																	<?php }else{ ?>
+																		<a
+																		class="btn btn-success"
+																		href="<?= base_url("Asrama/login")?>"
+																		>Login
+																		</a>
+																	<?php } ?>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-
 										</div>
 									</div>
 								</div>
@@ -105,7 +122,11 @@
 
 									</div>
 									<div class="widget-subheading">
+										<?php if($level != "null") { ?>
 										<?= $user['ket_level']?>
+										<?php }else{ ?>
+										
+										<?php } ?>
 									</div>
 								</div>
 							</div>
@@ -454,15 +475,17 @@
 					</span>
 				</div>
 
-				<?php 
-				if($level == 100){
-					$mylevel = "User";
-				}
-				if($level == 999){
-					$mylevel = "Musahil";
-				}
-				if($level == 1337){
-					$mylevel = "Admin";
+				<?php
+				if($level != "null"){ 
+					if($level == 100){
+						$mylevel = "User";
+					}
+					if($level == 999){
+						$mylevel = "Musahil";
+					}
+					if($level == 1337){
+						$mylevel = "Admin";
+					}
 				}
 				?>
 
@@ -477,7 +500,17 @@
 									</i>News
 								</a>
 							</li>
+
+							<?php if($level =="null") { ?>
+							<li class="hyper">
+								<a href="<?= base_url("Asrama/login")?>">
+									<i class="metismenu-icon pe-7s-door-lock">
+									</i>Login
+								</a>
+							</li>
+							<?php } ?> 
 							
+							<?php if($level !="null") { ?>
 							<li class="hyper">
 								<a href="<?= base_url($mylevel."/")?>">
 									<i class="metismenu-icon pe-7s-display1">
@@ -564,7 +597,35 @@
 								</a>
 							</li>
 							<?php } ?>
+							<?php } if($level != "1337") { ?>
+							<li class="hyper" id="get_token">
+								<a href="<?= base_url("Asrama/info")?>">
+									<i class="metismenu-icon pe-7s-add-user">
+									</i>Informasi Pendaftaran
+								</a>
+							</li>
+
+							<li class="hyper" id="get_token">
+								<a href="<?= base_url("Asrama/about")?>">
+									<i class="metismenu-icon pe-7s-info">
+									</i>Tentang Kami
+								</a>
+							</li>
+							<?php } ?>
 						</ul>
+						<div class = "col-lg-12 d-block">
+							<center>
+							<hr>
+							<p><b class="text text-primary">POWERED BY</b></p>
+							
+							<a href="https://www.trunojoyo.ac.id/">
+							<img src="<?= base_url("assets/img/UTM.png")?>" class="img-fluid" style="width : 50%">
+							</a>
+							<br>
+							<br><em class="text text-muted"><b>ASRAMA TRUNOJOYO</b> Lahirkan Insan Berakhlak Mulia</em>
+							<hr>
+							</center>
+						</div>
 					</div>
 				</div>
 			</div>

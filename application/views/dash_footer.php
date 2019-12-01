@@ -13,19 +13,22 @@
 </div>
 
 
-<?php 
-if($level == 100){
-$mylevel = "User";
-}
-if($level == 999){
-$mylevel = "Musahil";
-}
-if($level == 1337){
-$mylevel = "Admin";
+
+<?php
+if ($level != "null"){ 
+	if($level == 100){
+	$mylevel = "User";
+	}
+	if($level == 999){
+	$mylevel = "Musahil";
+	}
+	if($level == 1337){
+	$mylevel = "Admin";
+	}
 }
 ?>
 
-
+<?php if($level != "null") { ?>
 <!-- modal logout -->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 	style="display: none;" aria-hidden="true">
@@ -218,10 +221,20 @@ $mylevel = "Admin";
 		</div>
 	</div>
 </div>
+<?php } ?>
 <!-- =============================== -->
 <script type="text/javascript" src="<?= base_url('assets/'); ?>assets/scripts/main.js"></script>
 <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<?php  if($menu = "Berita Sispengma"){?>
 <script>
+$(document).ready(
+	function () {
+		$("img").addClass("img-fluid")
+});
+</script>
+
+<?php } ?>
+<!-- <script>
 function pilih(id) {
 	$("#placeforkamar").val(id);
 }
@@ -248,7 +261,7 @@ function pilih(id) {
             });
 
 		});
-</script>
+</script> -->
 
 </body>
 

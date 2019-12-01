@@ -11,6 +11,6 @@ $route["Musahil/managePassword"] = "Admin/ManagePassword";
 $route["Musahil/data_pendaftaran"] = "Admin/data_pendaftaran";
 $route["Musahil/data_gedung"] = "Admin/data_gedung";
 $route["Musahil/add_penghuni"] = "Admin/add_penghuni";
-$route["Musahil/get_token"] = "Admin/get_token";
+$route  ["Musahil/get_token"] = "Admin/get_token";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -21,9 +21,9 @@ class User extends CI_Controller
             if ($data['user']) {
                 $data['level'] = $this->session->userdata('id_level');
                 $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
-                $this->load->view('templates/dash_header', $data);
-                $this->load->view('templates/dashboard_user',$data);
-                $this->load->view('templates/dash_footer');
+                $this->load->view('dash_header', $data);
+                $this->load->view('User/dashboard_user',$data);
+                $this->load->view('dash_footer');
             } else {
                 redirect('.');
             }

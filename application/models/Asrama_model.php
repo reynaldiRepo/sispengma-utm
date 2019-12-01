@@ -182,11 +182,20 @@ class Asrama_model extends CI_Model{
         return true;
     }
 
+    //profile======================================================
     public function reset_password($uname){
         $this->db->where("username", $uname);
         $update = $this->db->update("tbl_login", array("password"=>md5($this->input->post("new_pwd"))));
         return $update;
     }
+
+    public function get_profile($nim){
+        $data = $this->db->query("SELECT * FROM tbl_pendaftaran, tbl_login WHERE tbl_pendaftaran.username = tbl_login.username and nim = '$nim'")->row_array();
+        return $data;
+    }
+
+
+    //profile======================================================
 
 
     // ===========================model berita================================/
@@ -220,6 +229,26 @@ class Asrama_model extends CI_Model{
     public function delete_berita($id_berita){
         $this->db->where("id_berita", $id_berita);
         $delete = $this->db->delete("berita");
+    }
+
+    public function get_next_berita($id_berita){
+        $sql = "select * from berita where id_berita > '$id_berita'";
+        $cek = $this->db->query($sql)->num_rows();
+        if($cek == 0){
+            return "null";
+        }else{
+            return $this->db->query($sql)->row_array();
+        }
+    }
+
+    public function get_prev_berita($id_berita){
+        $sql = "select * from berita where id_berita < '$id_berita'";
+        $cek = $this->db->query($sql)->num_rows();
+        if($cek == 0){
+            return "null";
+        }else{
+            return $this->db->query($sql)->row_array();
+        }
     }
 
     // ===========================model berita================================/

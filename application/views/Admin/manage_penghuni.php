@@ -87,7 +87,7 @@ $mylevel = "Admin";
 	function del(id) {
 		var con = confirm("Delete This Data");
 		if(con == true){
-			location.href="<?= base_url('$mylevel/delete_penghuni/')?>"+id;
+			location.href="<?= base_url("$mylevel/delete_penghuni/")?>"+id;
 		}else{
 			console.log("close");
 			}

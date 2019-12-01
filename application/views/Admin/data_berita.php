@@ -79,7 +79,7 @@ $mylevel = "Admin";
                                 </td>
                                 <td class="d-block">
                                     <center>
-                                    <a href="<?= base_url("$mylevel/view_post/$ber->id_berita")?>"
+                                    <a href="<?= base_url("Asrama/detail_berita/$ber->id_berita")?>"
                                      class = "btn btn-warning mb-2 text text-white" style="width : 100%" >View</a><br>
                                     <a href="<?= base_url("$mylevel/post_detail/$ber->id_berita")?>"
                                      class = "btn btn-info mb-2 text text-white" style="width : 100%" >Update</a><br>
