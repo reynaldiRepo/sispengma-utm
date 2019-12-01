@@ -53,8 +53,8 @@ $mylevel = "Admin";
 			<div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
 				<div class="row">
 					<div class="col-sm-12">
-						<table style="width: 100%;" id="example"
-							class="table table-hover table-striped table-bordered dataTable dtr-inline">
+						<table style="width: 100%;"
+							class="display table table-hover table-striped table-bordered dataTable dtr-inline">
 							<thead>
 								<tr role="row">
 									<th>Kode Gedung</th>

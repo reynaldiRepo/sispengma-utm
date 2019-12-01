@@ -14,6 +14,7 @@
 
 	<link href="<?= base_url('assets/') ?>main.css" rel="stylesheet">
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 	<script src="<?= base_url("vendor/ckeditor")?>/ckeditor.js"></script>
 	<script src="<?= base_url("vendor/ckeditor/samples/")?>js/sample.js"></script>
 	<!-- <link rel="stylesheet" href="<?= base_url("vendor/ckeditor/samples/")?>css/samples.css"> -->
@@ -630,4 +631,4 @@
 				</div>
 			</div>
 			<div class="app-main__outer">
-				<div class="app-main__inner" id="main-page">
+		<div class="app-main__inner" id="main-page">

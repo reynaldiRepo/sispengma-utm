@@ -134,8 +134,8 @@ class Asrama_model extends CI_Model{
     }
 
     public function get_pendaftar(){
-        $sql = "select * FROM tbl_pendaftaran
-                WHERE tbl_pendaftaran.nim not IN (SELECT tbl_penghuni_tetap.nim FROM tbl_penghuni_tetap)";
+        $sql = "select * FROM tbl_pendaftaran, tbl_jurusan
+                WHERE tbl_jurusan.id_jurusan = tbl_pendaftaran.id_jurusan and tbl_pendaftaran.nim not IN (SELECT tbl_penghuni_tetap.nim FROM tbl_penghuni_tetap)";
         $data = $this->db->query($sql)->result();
         return $data;
     }

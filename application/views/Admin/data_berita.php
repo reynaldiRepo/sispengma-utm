@@ -52,8 +52,8 @@ $mylevel = "Admin";
                 <div class="row">
                     <div class="col-sm-12">
                     <?= $this->session->flashdata('message'); ?>
-                    <table style="width: 100%;" id="example"
-                            class="table table-hover table-striped table-bordered dataTable dtr-inline">
+                    <table style="width: 100%;"
+                            class="display table table-hover table-striped table-bordered dataTable dtr-inline">
                         <thead>
                             <tr>
                                 <th>

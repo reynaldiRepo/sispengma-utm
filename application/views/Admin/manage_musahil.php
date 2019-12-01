@@ -46,7 +46,7 @@ $mylevel = "Admin";
 								<td><?= $musahil['ket_jurusan']?></td>
 							</tr>
 							<tr>
-								<th colspan = "2"><span onclick="del('<?= base_url('$mylevel/delete_musahil/'.$musahil['nim_musahil'].'/'.$musahil['uname'])?>')" class="btn btn-danger" style="width:100%">Delete Musahil</span></th>
+								<th colspan = "2"><span onclick="del('<?= base_url($mylevel.'/delete_musahil/'.$musahil['nim_musahil'].'/'.$musahil['uname'])?>')" class="btn btn-danger" style="width:100%">Delete Musahil</span></th>
 							</tr>
                             <tr>
 								<th colspan="2" class="bg-warning"> 

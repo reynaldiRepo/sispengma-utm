@@ -56,8 +56,8 @@ $mylevel = "Admin";
 			<div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
 				<div class="row">
 					<div class="col-sm-12">
-						<table style="width: 100%;" id="example"
-							class="table table-hover table-striped table-bordered dataTable dtr-inline">
+						<table style="width: 100%;"
+							class="display table table-hover table-striped table-bordered dataTable dtr-inline">
 							<thead>
 								<tr role="row">
 									<th>Kode Kamar</th>
@@ -121,7 +121,7 @@ $mylevel = "Admin";
 function del(id) {
     var con = confirm("Delete This Data");
     if(con == true){
-        location.href="<?= base_url('$mylevel/delete_kamar/'.$gedung.'/')?>"+id;
+        location.href="<?= base_url("$mylevel/delete_kamar/".$gedung.'/')?>"+id;
     }else{
         console.log("close");
     }

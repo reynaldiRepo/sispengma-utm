@@ -154,8 +154,8 @@ if ($level != "null"){
 				</button>
 			</div>
 			<div class="modal-body">
-				<table style="width: 100%;" id="example"
-					class="table table-hover table-striped table-bordered dataTable dtr-inline">
+				<table style="width: 100%;"
+					class="display table table-hover table-striped table-bordered">
 					<thead>
 						<tr role="row">
 							<th>Kode Kamar</th>
@@ -185,7 +185,47 @@ if ($level != "null"){
 	</div>
 </div>
 <!-- =============================== -->
-
+<!-- modal pilih mahasiswa -->
+<div class="modal fade" id="pilihMahasiswa" tabindex="-2" role="form" aria-labelledby="exampleModalLabel"
+	style="display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Pilih Mahasiswa</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<table style="width: 100%;"
+					class="display table table-hover table-striped table-bordered dataTable dtr-inline">
+					<thead>
+						<tr role="row">
+							<th>NIM</th>
+							<th>Nama Mahasiswa</th>
+							<th>Prodi</th>
+							<th>Option</th>
+						</tr>
+					</thead>
+					<tbody>
+					<?php foreach ($mahasiswa as $m){?>
+					<tr>
+						<td><?= $m->nim?></td>
+						<td><?= $m->nama?></td>
+						<td><?= $m->ket_jurusan?></td>
+						<td><button class="btn btn-success" onclick="pilihMhs('<?= $m->nim?>', '<?= $m->nama?>')" data-dismiss="modal">Pilih Mahasiswa</button></td>
+					</tr>
+					<?php }?>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- =============================== -->
 
 
 <!-- modal upload file -->
@@ -224,44 +264,42 @@ if ($level != "null"){
 <?php } ?>
 <!-- =============================== -->
 <script type="text/javascript" src="<?= base_url('assets/'); ?>assets/scripts/main.js"></script>
-<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.12.4.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<!-- https://code.jquery.com/jquery-3.3.1.js
+https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js -->
+
+<script>
+$(document).ready(function() {
+    $('table.display').DataTable();
+} );
+</script>
 <?php  if($menu = "Berita Sispengma"){?>
 <script>
 $(document).ready(
 	function () {
-		$("img").addClass("img-fluid")
+		$("img").addClass("img-fluid");
 });
-</script>
 
+</script>
 <?php } ?>
-<!-- <script>
+
+
+
+
+<script>
 function pilih(id) {
 	$("#placeforkamar").val(id);
 }
+
+function pilihMhs(nim,nama){
+	$("#nim").val(nim);
+	$("#nama").val(nama);
+}
+
 </script>
-<script src="http://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript">
-		$(document).ready(function(){
-		    $('#nim').autocomplete({
-                source: "<?php echo base_url('admin/get_pendaftar');?>",
-                select: function (event, ui) {
-                    $('[name="nim"]').val(ui.item.nim); 
-                }
-            });
 
-		});
-
-		$(document).ready(function(){
-		    $('#nimMus').autocomplete({
-                source: "<?php echo base_url('admin/get_penghuni_json');?>",
-                select: function (event, ui) {
-                    $('[name="nimMus"]').val(ui.item.nim); 
-                }
-            });
-
-		});
-</script> -->
 
 </body>
 

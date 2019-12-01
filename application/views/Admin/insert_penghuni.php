@@ -33,12 +33,15 @@ $mylevel = "Admin";
                         <h2 class="card-title">Masukan Penghuni Baru</h2>
                         <div class="form-group">
                             <?php echo form_open_multipart("$mylevel/add_penghuni")?>
-                            <label>Nim Mahasiswa</label>
-                            <input required type="text" class="form-control" name="nim" id="nim">
-                            <br>
+                            <label>Nim & Nama Mahasiswa</label>
+                            <div class="form-group d-flex">
+                            <input readonly required type="text" class="form-control" name="nim" id="nim" value="Nim Mahasiswa" style="width:40%">
+                            <input readonly required type="text" class="form-control" name="nama" id="nama" value="Nama Mahasiswa" style="width:40%">
+                            <div class="btn btn-success" id="btn-mhs" style="width:20%" data-toggle="modal" data-target="#pilihMahasiswa">Pilih Mahasiswa</div>
+                            </div>
                             <label>Kamar</label>
-                            <span class="d-flex"><input readonly type="text" class="form-control" name="kamar" id="placeforkamar" style="width:80%">
-                            <br><div class="btn btn-warning" style="width:20%" data-toggle="modal" data-target="#pilihKamar">Pilih Kamar</div></span><br>
+                            <span class="d-flex"><input readonly type="text" class="form-control" name="kamar" value="Kode Kamar" id="placeforkamar" style="width:80%">
+                            <br><div class="btn btn-warning" id="btn-kmr" style="width:20%" data-toggle="modal" data-target="#pilihKamar">Pilih Kamar</div></span><br>
                             <input type="submit" class="btn btn-info btn-lg" style="width:100%">
                             </form>
                         </div>

@@ -36,4 +36,4 @@ $mylevel = "Admin";
         </div>
     </div>
 </div>
-<script type="text/javascript" src="<?= base_url('assets/'); ?>assets/scripts/main.js"></script>
+<!-- <script type="text/javascript" src="<?= base_url('assets/'); ?>assets/scripts/main.js"></script> -->

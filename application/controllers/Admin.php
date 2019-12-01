@@ -285,7 +285,7 @@ class Admin extends CI_Controller
                 $data2['photo'] = $this->up_image("file", $data['username']);
                 $this->db->insert("tbl_login", $data2);
                 $this->db->insert("tbl_musahil", $data);
-                $this->session->set_flashdata('message', "<div class='alert alert-success'>Berhasil Tambah Musahil $cekNim</div>");
+                $this->session->set_flashdata('message', "<div class='alert alert-success'>Berhasil Tambah Musahil</div>");
                 redirect($this->cek_level()."/data_musahil"); 
             }else{
                 $this->session->set_flashdata('message', "<div class='alert alert-danger'>Nim Sudah ada</div>");
@@ -339,6 +339,7 @@ class Admin extends CI_Controller
         $data['level'] = $this->session->userdata('id_level');
         $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
         $data['kamar'] = $this->am->get_kamar_layak();
+        $data['mahasiswa'] = $this->am->get_pendaftar();
         $this->load->view('dash_header', $data);
         $this->load->view("admin/insert_penghuni",$data);
         $this->load->view('dash_footer',$data);
