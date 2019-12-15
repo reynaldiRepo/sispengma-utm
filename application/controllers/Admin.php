@@ -586,6 +586,17 @@ class Admin extends CI_Controller
 
     }
 
+    public function update_info(){
+        $this->cek_session();
+        $data['menu'] = "Update Berita";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $data['berita'] = $this->am->get_berita_detail(("999"));
+        $this->load->view('dash_header', $data);
+        $this->load->view("admin/update_post",$data);
+        $this->load->view('dash_footer');
+    }
+
    
 
 

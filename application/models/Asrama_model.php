@@ -200,14 +200,14 @@ class Asrama_model extends CI_Model{
 
     // ===========================model berita================================/
     public function get_berita(){
-        $data = $this->db->get("berita")->result();
+        $data = $this->db->query("select * from berita order by post_date DESC")->result();
         return $data;
     }
 
     public function add_berita(){
         $data['id_berita'] = '';
         $data['judul_berita'] = $this->input->post("judul");
-        $data['post_date'] = date(" d F Y");
+        $data['post_date'] = date(" d-m-Y");
         $data['isi'] = $this->input->post("isi");
         $insert = $this->db->insert("berita", $data);
         return $insert;
@@ -221,6 +221,7 @@ class Asrama_model extends CI_Model{
     public function update_berita($id_berita){
         $data['judul_berita'] = $this->input->post("judul");
         $data['isi'] = $this->input->post("isi");
+        $data['post_date'] = date(" d-m-Y");
         $this->db->where("id_berita", $id_berita);
         $update = $this->db->update("berita", $data);
         return true;

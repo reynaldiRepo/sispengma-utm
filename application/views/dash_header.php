@@ -582,6 +582,12 @@
 									</i>Upload File
 								</a>
 							</li>
+							<li class="hyper" id="data_admin">
+								<a href="<?= base_url($mylevel."/update_info")?>">
+									<i class="metismenu-icon pe-7s-news-paper">
+									</i>Update Informasi Pendaftaran
+								</a>
+							</li>
 							<?php } ?>
 							<?php if ($level == 999 || $level == 1337) { ?>
 							<li class="app-sidebar__heading">Pendaftaran</li>
@@ -600,7 +606,7 @@
 							<?php } ?>
 							<?php } if($level != "1337") { ?>
 							<li class="hyper" id="get_token">
-								<a href="<?= base_url("Asrama/info")?>">
+								<a href="<?= base_url("Asrama/detail_berita/999")?>">
 									<i class="metismenu-icon pe-7s-add-user">
 									</i>Informasi Pendaftaran
 								</a>

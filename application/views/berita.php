@@ -18,7 +18,7 @@
             <div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
                 <div class="row">
 					<div class="col-sm-12">
-						<h3 class="text text-dark text-lg"><b><?= $berita['judul_berita']?></b></h3>
+						<h3 class="text text-dark text-lg"><b><?= $berita['judul_berita']?></b></h3>        
 						<p><?= $berita['isi']?></p>
                     </div>
                 </div>
