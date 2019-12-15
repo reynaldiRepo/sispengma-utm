@@ -57,6 +57,7 @@ $mylevel = "Admin";
 									<th>Nama</th>
 									<th>Prodi</th>
 									<th>kamar</th>
+									<th>Bukti Pendaftaran</th>
 									<th>Option</th>
 								</tr>
 							</thead>
@@ -67,6 +68,7 @@ $mylevel = "Admin";
 									<td><?= $p->nama?></td>
 									<td><?= $p->ket_jurusan?></td>
 									<td><?= $p->kamar?></td>
+									<td><a href="<?= base_url("$mylevel/cetak_bukti/".$p->nim)?>">Cetak Bukti</a></td>
 									<td>
 										<a class="btn btn-info" href="<?= base_url("$mylevel/manage_penghuni/$p->nim")?>">
 											Manage Penghuni
