@@ -8,6 +8,7 @@
                 </div>
                 <div><?= $menu ?>
                     <div class="page-title-subheading">Selamat Datang Di Sistem Informasi Penghuni Asrama Universitas Trunojoyo Madura
+                        <br><a href="<?= base_url("Asrama/detail_berita/999")?>">Lihat Informasi Pendaftaran Disini</a>
                     </div>
                 </div>
             </div>
@@ -22,7 +23,7 @@
 						<a href="<?= base_url("Asrama/detail_berita/".$ber->id_berita)?>"><h3 class="text text-dark text-lg"><b><?= $ber->judul_berita?></b></h3></a>
 						<em class="text text-dark text-lg bg-light p-1"> <?= $ber->post_date ?> </em>
 
-						<p><?= substr($ber->isi,0, 500)."......." ?><a href="<?= base_url("Asrama/detail_berita/".$ber->id_berita)?>">read_more</a></p>
+						<p><?= substr($ber->isi,0, 400)."......." ?><a href="<?= base_url("Asrama/detail_berita/".$ber->id_berita)?>">read_more</a></p>
                     </div>
                 </div>
             </div>
