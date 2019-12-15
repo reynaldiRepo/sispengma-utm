@@ -26,6 +26,23 @@ class Asrama extends CI_Controller
         $this->load->view('dash_footer');
     }
 
+
+    public function about(){
+        $data['menu'] = "Tentang Kami";
+        if($this->session->userdata("username")!==null){
+            $data['level'] = $this->session->userdata('id_level');
+            $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        }
+        else{
+            $data['level'] = "null";
+            $data['user'] = "null";
+        }
+        $data['berita'] = $this->am->get_berita();
+        $this->load->view('dash_header', $data);
+        $this->load->view("about",$data);
+        $this->load->view('dash_footer');
+    }
+
     public function detail_berita($id_berita){
         $data['menu'] = "Berita Sispengma";
         if($this->session->userdata("username")!==null){
@@ -86,6 +103,7 @@ class Asrama extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logout.</div>');
         redirect('Asrama/login');
     }
+    
 
     
 
