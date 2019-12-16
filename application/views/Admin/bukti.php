@@ -16,11 +16,13 @@
 		<div class="card-body">
 			<div id="example_wrapper" class="dataTables_wrapper dt-bootstrap4">
 				<center>
-					<h2><b>BUKTI PENDAFTARAN</b></h2>
+					<h4><b>BUKTI PENDAFTARAN ASRAMA MAHASISWA TRUNOJOYO MADURA</b></h4>
+                    <em>Dicetak pada <?= date("d-m-Y")?></em>
+                    <hr>
 				</center>
 				
 					<div class="row">
-						<div class="col-sm-9">
+						<div class="col-sm-12">
 							<table class="table table-bordered">
 								<tr>
 									<th>Nama</th>
@@ -43,16 +45,14 @@
 									<td><?= $bukti['kamar'] ?></th>
 								<tr>
 							</table>
-                            <em>Dicetak pada <?= date("d-m-Y")?></em>
 						</div>
-						<div class="col-sm-3">
-							<center>
-                                <b>QR CODE</b>
+						<div class="col-sm-12 float-right">
+							
+                                <b>QR CODE</b><br>
 								<a rel='nofollow' href='http://www.qrcode-generator.de' border='0'
 									style='cursor:default'></a><img
 									src='https://chart.googleapis.com/chart?cht=qr&chl=<?= $bukti['nim']."-".$bukti['kamar']."-".$bukti['tanggal_mendaftar']?>&chs=180x180&choe=UTF-8&chld=L|2'
 									alt=''>
-							</center>
 						</div>
 					</div>
 				</div>

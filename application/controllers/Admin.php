@@ -398,9 +398,11 @@ class Admin extends CI_Controller
 
     public function add_penghuni(){
         $this->cek_session();
-        $insert = $this->am->insert_penghuni();                  
+        $insert = $this->am->insert_penghuni();        
+        $nim = $this->input->post("nim");
+        $mylevel = $this->cek_level();
         if($insert){
-            $this->session->set_flashdata('message', "<div class='alert alert-success'>Data Berhasil Ditambah Cetak <a href='#'>disini</a></div>");
+            $this->session->set_flashdata('message', "<div class='alert alert-success'>Data Berhasil Ditambah Cetak <a href='".base_url("$mylevel/cetak_bukti/$nim")."' target='_blank'>disini</a></div>");
         }else{
             $this->session->set_flashdata('message', "<div class='alert alert-danger'>Something Wrong</div>");
         }
