@@ -26,7 +26,6 @@ class Asrama extends CI_Controller
         $this->load->view('dash_footer');
     }
 
-
     public function about(){
         $data['menu'] = "Tentang Kami";
         if($this->session->userdata("username")!==null){

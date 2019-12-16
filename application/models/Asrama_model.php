@@ -148,6 +148,8 @@ class Asrama_model extends CI_Model{
         return $data;
     }
 
+
+
     public function insert_penghuni(){
         $data['nim'] = $this->input->post("nim");
         $data['kamar'] = $this->input->post("kamar");

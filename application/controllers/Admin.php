@@ -408,6 +408,16 @@ class Admin extends CI_Controller
 
     }
 
+    public function cetak_bukti($nim){
+        $this->cek_session();
+        $data['menu'] = "Bukti Pendaftaran";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $data['nim'] = $nim;
+        $data['bukti'] = $this->am->get_penghuni_detail($nim);
+        $this->load->view("Admin/bukti",$data);      
+    }
+
     public function data_pendaftaran(){
         $this->cek_session();
         $data['menu'] = "Data Pendaftaran";
