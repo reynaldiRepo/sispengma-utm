@@ -1,0 +1,649 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 18, 2019 at 02:21 PM
+-- Server version: 5.7.26
+-- PHP Version: 7.2.18
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `asrama_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `berita`
+--
+
+DROP TABLE IF EXISTS `berita`;
+CREATE TABLE IF NOT EXISTS `berita` (
+  `id_berita` bigint(20) NOT NULL AUTO_INCREMENT,
+  `judul_berita` text NOT NULL,
+  `post_date` char(255) NOT NULL,
+  `isi` text NOT NULL,
+  PRIMARY KEY (`id_berita`)
+) ENGINE=MyISAM AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id_berita`, `judul_berita`, `post_date`, `isi`) VALUES
+(1, 'Antusiasme Jamaah Sholawat Menggapai Syafaat Nabi Muhammad SAW', ' 02-12-2019', '<p>Bangkalan, Rabu (20/11/2019) Antusiasme ribuan jamaah sholawat hadiri acara ‘’Asrama Bersholawat’’, sudah menjadi kegiatan istiqomah satiap tahun di bulan <em>Maulud</em> bagi Asrama Mahasiswa UTM menggelar acara ‘’Asrama Bersholawat’’. Berbeda dari tahun-tahun sebelumnya, pada tahun ini ‘’Asrama Bersholawat’’ yang mengusung tema ‘’Raih Syafaat dengan Sholawat, Tingkatkan Iman dan Taqwa dengan Meneladani Akhlak Nabi Muhammad SAW’’ ini dihadiri ribuan warga Asrama Mahasiswa UTM dan juga masyarakat umum. Praacara dimulai sekitar pukul 18.15 WIB dengan suguhan penampilan grup sholawat al banjari andalan Asrama Mahasiswa UTM “ Nahdlatus Syubban”. Tepat pukul 19.30 acara dibuka oleh MC  kemudian disusul dengan pembacaan ayat suci alquran yg dilantunkan oleh salah satu warga asrama putra. Kemudian disusul dengan sambutan oleh Bapak Agung Ali Fahmi (Wakil Rektor III UTM) sekaligus membuka acara ‘’Asrama Bersholawat’’ ini.</p>\r\n\r\n<p><img alt=\"\" src=\"http://localhost/SISPENGMA-UTM/uploaded/news_image/SholawatAsrama_f_5de13b2ebb918.jpg\"></p>\r\n\r\n<p>Berselang beberapa menit usai sambutan sekaligus pembukaan, jama’ah sholawat dari masyarakat umum mulai berdatangan memadati area acara ‘’Asrama Bersholawat’’. Selain oleh jama’ah sholawat dari masyarakat umum halaman asrama juga ramai berjajar pedagang yang turut memadati area acara. Mendapati kondisi yang sangat padat ramai, seluruh panitia siaga dan sedia dalam mengatur dan memberi panduan. Meski tidak semua jamaah sholawat mendapat alas tempat duduk namun tak sedikitpun mengurangi antusias dan jamaah sholawat untuk tetap mengikuti acara demi acara.</p>\r\n\r\n<p>Asrama bersholawat ini dirangkai tidak hanya menghadirkan RKH. Karror Aschal dan grup sholawatnya saja, namun juga turut mengundang K.H Imam Makhsus Ridwan sebagai penceramah agama. Lengkaplah sudah acara ini sebagai bentuk rasa syukur dan tentunya menambah kecintaan kita dalam upaya meraih syafaat nabi Muhammad SAW.</p>\r\n'),
+(7, 'Keluarga Besar Asrama UTM melaksanakan sholat Ghaib untuk Almarhum BJ Habibie Presiden ke 3 RI', ' 02-12-2019', '<p>Berbeda dengan kegiatan jumat manis biasanya, selain melakukan istighosah dan doa bersama, warga asrama mahasiswa UTM pada malam ini juga melaksanakan sholat ghoib untuk Presiden RI yang ke-3 Alm. B.J. Habibie dan sholat tasbih berjamaah, pada kamis, 12 September 2019 di halaman gedung A.</p>\r\n\r\n<p>Acara sholat ghoib dan tasbih kali ini diikuti oleh kurang lebih 1000 orang.  jama’ah yang hadir hari terdiri dari warga, pengurus dan pengelola dan civitas akademika UTM, khusus acara ini terbuka untuk umum. Turut hadir dalam acara tersebut direktur Asrama bapak Ach. Khozaimi, Bapak Badrus Syamsi selaku sekretaris Asrama dan jajaran pengelola Asrama yang lain.</p>\r\n\r\n<p>Kegiatan ini dimulai dengan pembacaan surah Yasin Surah Al-Waqi’ah dan surah Al-Mulk yang dilakukan sebelum adzan Maghrib dan pahalanya dikhususkan untuk Almarhum BJ. Habibie.</p>\r\n\r\n<p>Sebelum sholat ghaib dimulai, direktur asrama memberikan penjelasan mengenai tata cara shalat ghaib, selain itu beliau juga menyampaikan ucapan bela sungkawa yang mendalam atas wafatnya president RI ke-3. “Atas nama keluarga besar Asrama UTM, kami mengucapkan belasungkawa yang dalam atas meninggalnya kader terbaik bangsa yaitu Prof. BJ. Habibie president RI ke 3, semoga Almarhum diampuni segala dosanya, diterima segala amal baiknya dan mendapatkan tempat yang baik di sisi Allah swt”. Direktur Asrama juga mengajak seluruh warga asrama agar mendedikasikan diri untuk bangsa seperti yang sudah dilakukan oleh BJ. Habibie.</p>\r\n\r\n<p>Setelah melakukan sholat ghaib, tahlil dan doa bersama, acara ditutup dengan melaksanakan sholat isya’ berjamaah.</p>\r\n\r\n<p><img alt=\"\" src=\"http://asrama.trunojoyo.ac.id/wp-content/uploads/2019/09/20190912_181357-1024x576.jpeg\"></p>\r\n'),
+(999, 'INFORMASI PENDAFTARAN', ' 15-12-2019', '<h1>Pendaftaran Penghuni Baru Asrama Mahasiswa Universitas Trunojoyo Madura</h1>\r\n\r\n<ul>\r\n <li>Pendaftarann diawali dengan pendaftaran Offline di Asrama mahasiswa Universitas Trunojoyo Madura 05 Mei - 06 Juli 2020</li>\r\n <li>Para Calon Pendaftar Datang dan membawa Berkas diantara lain :<br>\r\n  \r\n <ul>\r\n  <li>Berkas Kelulusan SBM/SNMPTN/Mandiri</li>\r\n  <li>Verifikasi Pendaftaran Mahasiswa Universitas Trunojoyo Madura</li>\r\n  <li>Kartu Identitas<br>\r\n   </li>\r\n </ul>\r\n Semua berkas dibawa untuk mendapatkanToken sebagai verifikasi Akun Login Sistem Penghuni Asrama untuk mengisi bio data diri dan informasi lainnya</li>\r\n <li>Setalah Semua dilakukan pengisian, Mahasiswa kembali menuju asrama Universitas Trunojoyo Madura, setelah melakukan pembayaran, Untuk mendapatkan informasi kamar yang akan dihuni</li>\r\n</ul>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_berkas`
+--
+
+DROP TABLE IF EXISTS `tbl_berkas`;
+CREATE TABLE IF NOT EXISTS `tbl_berkas` (
+  `nim` char(12) DEFAULT NULL,
+  `pass_foto` char(1) DEFAULT NULL,
+  `surat_pernyataan` char(1) DEFAULT NULL,
+  `ktp_penghuni` char(1) DEFAULT NULL,
+  `ktp_ayah` char(1) DEFAULT NULL,
+  `ktp_ibu` char(1) DEFAULT NULL,
+  `kartu_keluarga` char(1) DEFAULT NULL,
+  `kwitansi_daftar` char(1) DEFAULT NULL,
+  `kwitansi_karakter` char(1) DEFAULT NULL,
+  `surat_dokter` char(1) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_14` (`nim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_fakultas`
+--
+
+DROP TABLE IF EXISTS `tbl_fakultas`;
+CREATE TABLE IF NOT EXISTS `tbl_fakultas` (
+  `id_fakultas` char(2) NOT NULL,
+  `nama_fakultas` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_fakultas`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_fakultas`
+--
+
+INSERT INTO `tbl_fakultas` (`id_fakultas`, `nama_fakultas`) VALUES
+('01', 'Hukum'),
+('02', 'Pertanian'),
+('03', 'Keislaman'),
+('04', 'Teknik'),
+('05', 'Pendidikan'),
+('06', 'Fisib');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_gedung`
+--
+
+DROP TABLE IF EXISTS `tbl_gedung`;
+CREATE TABLE IF NOT EXISTS `tbl_gedung` (
+  `id_gedung` char(3) CHARACTER SET utf8mb4 NOT NULL,
+  `keterangan` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+  `jenis_kelamin` char(1) NOT NULL,
+  PRIMARY KEY (`id_gedung`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_gedung`
+--
+
+INSERT INTO `tbl_gedung` (`id_gedung`, `keterangan`, `jenis_kelamin`) VALUES
+('A', 'Gedung Laki - laki', '1'),
+('B', 'Gedung Perempuan', '2'),
+('C', 'Gedung Perempuan', '2'),
+('D', 'Gedung Perempuan', '2'),
+('E', 'Gedung Perempuan', '2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_hobi`
+--
+
+DROP TABLE IF EXISTS `tbl_hobi`;
+CREATE TABLE IF NOT EXISTS `tbl_hobi` (
+  `nim` char(12) DEFAULT NULL,
+  `ket_hobi` varchar(255) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_7` (`nim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_jalurmasuk`
+--
+
+DROP TABLE IF EXISTS `tbl_jalurmasuk`;
+CREATE TABLE IF NOT EXISTS `tbl_jalurmasuk` (
+  `id_jalurmasuk` char(1) NOT NULL,
+  `ket_jalurmasuk` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_jalurmasuk`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_jalurmasuk`
+--
+
+INSERT INTO `tbl_jalurmasuk` (`id_jalurmasuk`, `ket_jalurmasuk`) VALUES
+('1', 'SNMPTN'),
+('2', 'SBMPTN'),
+('3', 'Mandiri'),
+('4', 'Prestasi');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_jurusan`
+--
+
+DROP TABLE IF EXISTS `tbl_jurusan`;
+CREATE TABLE IF NOT EXISTS `tbl_jurusan` (
+  `id_jurusan` char(3) NOT NULL,
+  `id_fakultas` char(2) DEFAULT NULL,
+  `ket_jurusan` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_jurusan`),
+  KEY `FK_RELATIONSHIP_4` (`id_fakultas`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_jurusan`
+--
+
+INSERT INTO `tbl_jurusan` (`id_jurusan`, `id_fakultas`, `ket_jurusan`) VALUES
+('101', '01', 'Ilmu Hukum'),
+('201', '02', 'Agriteknologi'),
+('202', '02', 'Agribisnis'),
+('203', '02', 'Kelautan'),
+('301', '03', 'Ekonomi Syariah'),
+('302', '03', 'Hukum Bisnis Syariah'),
+('401', '04', 'Teknik Informatika'),
+('402', '04', 'Teknik Elektro'),
+('403', '04', 'Teknik Industri'),
+('404', '04', 'Teknik Mesin'),
+('405', '04', 'Sistem Informasi'),
+('406', '04', 'Teknik Mekatronika'),
+('501', '05', 'PGSD'),
+('502', '05', 'PGPAUD'),
+('503', '05', 'Pendidikan IPA'),
+('504', '05', 'Pendidikan Informatika'),
+('505', '05', 'Pendidikan Matematika'),
+('601', '06', 'Ilmu Komunikasi'),
+('602', '06', 'Psikologi'),
+('603', '06', 'Sosiologi'),
+('604', '06', 'Bahasa Inggris');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_kamar`
+--
+
+DROP TABLE IF EXISTS `tbl_kamar`;
+CREATE TABLE IF NOT EXISTS `tbl_kamar` (
+  `id_kamar` char(4) NOT NULL,
+  `id_gedung` char(3) CHARACTER SET utf8mb4 NOT NULL,
+  `kondisi` char(1) CHARACTER SET utf8mb4 NOT NULL,
+  PRIMARY KEY (`id_kamar`),
+  KEY `id_gedung` (`id_gedung`),
+  KEY `kondisi` (`kondisi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_kamar`
+--
+
+INSERT INTO `tbl_kamar` (`id_kamar`, `id_gedung`, `kondisi`) VALUES
+('A101', 'A', '1'),
+('A102', 'A', '2'),
+('A103', 'A', '1'),
+('A104', 'A', '1'),
+('A105', 'A', '1'),
+('B101', 'B', '1'),
+('B102', 'B', '3'),
+('B103', 'B', '1'),
+('B201', 'B', '1'),
+('B202', 'B', '2'),
+('C101', 'C', '2'),
+('C102', 'C', '1'),
+('C103', 'C', '2'),
+('C201', 'C', '1'),
+('C202', 'C', '2'),
+('D101', 'D', '1'),
+('D102', 'D', '1'),
+('D103', 'D', '1'),
+('D201', 'D', '2'),
+('D202', 'D', '1'),
+('E101', 'E', '3'),
+('E102', 'E', '1'),
+('E103', 'E', '3'),
+('E201', 'E', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_kelamin`
+--
+
+DROP TABLE IF EXISTS `tbl_kelamin`;
+CREATE TABLE IF NOT EXISTS `tbl_kelamin` (
+  `id_kelamin` char(1) NOT NULL,
+  `ket_kelamin` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_kelamin`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_kelamin`
+--
+
+INSERT INTO `tbl_kelamin` (`id_kelamin`, `ket_kelamin`) VALUES
+('1', 'Laki - laki'),
+('2', 'Perempuan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_kondisi_kamar`
+--
+
+DROP TABLE IF EXISTS `tbl_kondisi_kamar`;
+CREATE TABLE IF NOT EXISTS `tbl_kondisi_kamar` (
+  `id_kondisi` char(1) CHARACTER SET utf8mb4 NOT NULL,
+  `keterangan` varchar(64) CHARACTER SET utf8mb4 NOT NULL,
+  PRIMARY KEY (`id_kondisi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_kondisi_kamar`
+--
+
+INSERT INTO `tbl_kondisi_kamar` (`id_kondisi`, `keterangan`) VALUES
+('1', 'Layak'),
+('2', 'Cukup Layak'),
+('3', 'Tidak Layak');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_level`
+--
+
+DROP TABLE IF EXISTS `tbl_level`;
+CREATE TABLE IF NOT EXISTS `tbl_level` (
+  `id_level` char(4) NOT NULL,
+  `ket_level` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_level`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_level`
+--
+
+INSERT INTO `tbl_level` (`id_level`, `ket_level`) VALUES
+('100', 'Pendaftar'),
+('1337', 'Administrator'),
+('999', 'Musahil');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_login`
+--
+
+DROP TABLE IF EXISTS `tbl_login`;
+CREATE TABLE IF NOT EXISTS `tbl_login` (
+  `username` varchar(32) NOT NULL,
+  `id_level` char(4) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `user_created` varchar(255) DEFAULT NULL,
+  `photo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`username`),
+  KEY `FK_RELATIONSHIP_5` (`id_level`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_login`
+--
+
+INSERT INTO `tbl_login` (`username`, `id_level`, `password`, `user_created`, `photo`) VALUES
+('Admin101', '1337', 'f6fdffe48c908deb0f4c3bd36c032e72', '2018-04-01 00:00:00', 'Admin.jpg'),
+('M170411100049', '999', '41e0071d498843480bb42775a818f855', '2017-06-03 00:00:00', 'M1704111000495de2338aa56a5.jpg'),
+('U170411100049', '100', '6919b0da565ba5fbace53fa22149e76a', '2019-11-03 00:00:00', 'M1704111000495de2338aa56a5.jpg'),
+('U190411100012', '100', 'fb7706e74375ced06a876e20898d0a7f', '2019-11-03 00:00:00', 'U190411100053.jpg'),
+('U190411100049', '100', '8724aa758c2f662d79952870ef486ea6', '2019-11-06 05:24:14', 'U190411100049.jpg'),
+('U190411100050', '100', 'b89dcf83a35e09b516eee3d3e55e173e', '2019-11-06 05:24:14', 'U190411100050.jpg'),
+('U190411100051', '100', 'a916a3d6a3de61b07731a92ca424db0a', '2019-11-06 05:24:14', 'U190411100051.jpg'),
+('U190411100052', '100', 'a8e210c6a109dac22eb5af9e7db9bed3', '2019-11-06 05:24:14', 'U190411100052.jpg'),
+('U190411100053', '100', '6d291c30d0df3110e4dc39ad4afe0b9e', '2019-11-06 05:24:14', 'U190411100053.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_musahil`
+--
+
+DROP TABLE IF EXISTS `tbl_musahil`;
+CREATE TABLE IF NOT EXISTS `tbl_musahil` (
+  `nim_musahil` char(12) NOT NULL,
+  `username` varchar(32) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`nim_musahil`),
+  KEY `FK_RELATIONSHIP_16` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_musahil`
+--
+
+INSERT INTO `tbl_musahil` (`nim_musahil`, `username`, `nama`) VALUES
+('170411100049', 'M170411100049', 'Reynaldi');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_orangtua`
+--
+
+DROP TABLE IF EXISTS `tbl_orangtua`;
+CREATE TABLE IF NOT EXISTS `tbl_orangtua` (
+  `nim` char(12) DEFAULT NULL,
+  `nama_ayah` varchar(255) DEFAULT NULL,
+  `pekerjaan_ayah` varchar(255) DEFAULT NULL,
+  `telp_ayah` varchar(16) DEFAULT NULL,
+  `nama_ibu` varchar(255) DEFAULT NULL,
+  `pekerjaan_ibu` varchar(255) DEFAULT NULL,
+  `telp_ibu` varchar(16) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_11` (`nim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_organisasi`
+--
+
+DROP TABLE IF EXISTS `tbl_organisasi`;
+CREATE TABLE IF NOT EXISTS `tbl_organisasi` (
+  `nim` char(12) DEFAULT NULL,
+  `nama_organisasi` varchar(255) DEFAULT NULL,
+  `tahun_masuk` char(4) DEFAULT NULL,
+  `tahun_selesai` char(4) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_9` (`nim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pendaftaran`
+--
+
+DROP TABLE IF EXISTS `tbl_pendaftaran`;
+CREATE TABLE IF NOT EXISTS `tbl_pendaftaran` (
+  `nim` char(12) NOT NULL,
+  `id_jurusan` char(3) DEFAULT NULL,
+  `username` varchar(32) DEFAULT NULL,
+  `id_kelamin` char(1) DEFAULT NULL,
+  `id_jalurmasuk` char(1) DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `tempat_lahir` varchar(50) DEFAULT NULL,
+  `tanggal_lahir` char(10) DEFAULT NULL,
+  `no_telp` varchar(16) DEFAULT NULL,
+  `alamat` varchar(255) DEFAULT NULL,
+  `kode_kelurahan` varchar(10) DEFAULT NULL,
+  `kode_pos` char(5) DEFAULT NULL,
+  `tanggal_mendaftar` datetime DEFAULT NULL,
+  PRIMARY KEY (`nim`),
+  KEY `FK_RELATIONSHIP_1` (`id_kelamin`),
+  KEY `FK_RELATIONSHIP_2` (`id_jalurmasuk`),
+  KEY `FK_RELATIONSHIP_3` (`id_jurusan`),
+  KEY `FK_RELATIONSHIP_6` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_pendaftaran`
+--
+
+INSERT INTO `tbl_pendaftaran` (`nim`, `id_jurusan`, `username`, `id_kelamin`, `id_jalurmasuk`, `nama`, `tempat_lahir`, `tanggal_lahir`, `no_telp`, `alamat`, `kode_kelurahan`, `kode_pos`, `tanggal_mendaftar`) VALUES
+('170411100049', '401', 'U170411100049', '1', '2', 'Reynaldi', 'Bandung', '1998-04-08', '081332826907', 'Perumahan Angkatan Lau BRAI AL 3 no 8', NULL, NULL, '2017-06-08 00:00:00'),
+('190411100012', '202', 'U190411100012', '1', '1', 'Ahmad Khairun', 'Jombang', '1999-12-02', '0813212221', 'Jombang Undipu Regency', '', NULL, '2019-12-10 00:00:00'),
+('190411100049', '401', 'U190411100049', '1', '1', 'Risky Alamsyah', 'Bandung', '1999-03-22', '0819274829128', 'Perumahan Bukit Randuagung indah blok al 3 no 8', NULL, NULL, '2019-12-18 00:00:00'),
+('190411100050', '401', 'U190411100050', '1', '1', 'Dony Arifin', 'Tulungagung', '2000-07-02', '08192748121312', 'Perumahan Indah Tulungagung', NULL, NULL, '2019-12-15 00:00:00'),
+('190411100051', '401', 'U190411100051', '1', '1', 'johan abdul', 'Surabaya', '2000-11-12', '08191232121312', 'Perumahan Indah Surabaya', NULL, NULL, '2019-12-29 00:00:00'),
+('190411100052', '401', 'U190411100052', '1', '1', 'Anang ruksamu', 'Blitar', '2000-05-22', '0813138121312', 'Blitar hill Regency', NULL, NULL, '2019-12-09 00:00:00'),
+('190411100053', '401', 'U190411100053', '1', '1', 'Tomi Riansyah', 'Bangkalan', '2000-09-17', '0815124121312', 'Perumahan Cendana Kamal', NULL, NULL, '2019-12-01 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pendidikan`
+--
+
+DROP TABLE IF EXISTS `tbl_pendidikan`;
+CREATE TABLE IF NOT EXISTS `tbl_pendidikan` (
+  `id_pendidikan` char(2) NOT NULL,
+  `ket_pendidikan` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_pendidikan`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_pendidikan`
+--
+
+INSERT INTO `tbl_pendidikan` (`id_pendidikan`, `ket_pendidikan`) VALUES
+('01', 'Sekolah Dasar'),
+('02', 'Sekolah Menengah Pertama'),
+('03', 'Sekolah Menengah Atas');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_penghuni_tetap`
+--
+
+DROP TABLE IF EXISTS `tbl_penghuni_tetap`;
+CREATE TABLE IF NOT EXISTS `tbl_penghuni_tetap` (
+  `nim` char(12) NOT NULL,
+  `kamar` char(4) NOT NULL,
+  PRIMARY KEY (`nim`),
+  KEY `kamar` (`kamar`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_penghuni_tetap`
+--
+
+INSERT INTO `tbl_penghuni_tetap` (`nim`, `kamar`) VALUES
+('190411100049', 'A101'),
+('190411100050', 'A101'),
+('190411100051', 'A101'),
+('170411100049', 'A102'),
+('190411100012', 'A104'),
+('190411100052', 'A105');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_prestasi`
+--
+
+DROP TABLE IF EXISTS `tbl_prestasi`;
+CREATE TABLE IF NOT EXISTS `tbl_prestasi` (
+  `nim` char(12) DEFAULT NULL,
+  `nama_prestasi` varchar(255) DEFAULT NULL,
+  `tahun_prestasi` char(4) DEFAULT NULL,
+  `berkas_prestasi` varchar(255) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_8` (`nim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_riwayatpendidikan`
+--
+
+DROP TABLE IF EXISTS `tbl_riwayatpendidikan`;
+CREATE TABLE IF NOT EXISTS `tbl_riwayatpendidikan` (
+  `id_pendidikan` char(2) DEFAULT NULL,
+  `nim` char(12) DEFAULT NULL,
+  `nama_sekolah` varchar(255) DEFAULT NULL,
+  `tahun_lulus` char(4) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_12` (`nim`),
+  KEY `FK_RELATIONSHIP_17` (`id_pendidikan`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_riwayatsakit`
+--
+
+DROP TABLE IF EXISTS `tbl_riwayatsakit`;
+CREATE TABLE IF NOT EXISTS `tbl_riwayatsakit` (
+  `nim` char(12) DEFAULT NULL,
+  `nama_penyakit` varchar(255) DEFAULT NULL,
+  `ket_penyakit` varchar(255) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_10` (`nim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_validasiberkas`
+--
+
+DROP TABLE IF EXISTS `tbl_validasiberkas`;
+CREATE TABLE IF NOT EXISTS `tbl_validasiberkas` (
+  `nim` char(12) DEFAULT NULL,
+  `pass_foto` char(1) DEFAULT NULL,
+  `surat_pernyataan` char(1) DEFAULT NULL,
+  `ktp_penghuni` char(1) DEFAULT NULL,
+  `ktp_ayah` char(1) DEFAULT NULL,
+  `ktp_ibu` char(1) DEFAULT NULL,
+  `kartu_keluarga` char(1) DEFAULT NULL,
+  `kwitansi_daftar` char(1) DEFAULT NULL,
+  `kwitansi_karakter` char(1) DEFAULT NULL,
+  `surat_dokter` char(1) DEFAULT NULL,
+  KEY `FK_RELATIONSHIP_15` (`nim`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_berkas`
+--
+ALTER TABLE `tbl_berkas`
+  ADD CONSTRAINT `FK_RELATIONSHIP_14` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`);
+
+--
+-- Constraints for table `tbl_hobi`
+--
+ALTER TABLE `tbl_hobi`
+  ADD CONSTRAINT `FK_RELATIONSHIP_7` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`);
+
+--
+-- Constraints for table `tbl_jurusan`
+--
+ALTER TABLE `tbl_jurusan`
+  ADD CONSTRAINT `FK_RELATIONSHIP_4` FOREIGN KEY (`id_fakultas`) REFERENCES `tbl_fakultas` (`id_fakultas`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tbl_kamar`
+--
+ALTER TABLE `tbl_kamar`
+  ADD CONSTRAINT `tbl_kamar_ibfk_1` FOREIGN KEY (`id_gedung`) REFERENCES `tbl_gedung` (`id_gedung`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `tbl_kamar_ibfk_2` FOREIGN KEY (`kondisi`) REFERENCES `tbl_kondisi_kamar` (`id_kondisi`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tbl_login`
+--
+ALTER TABLE `tbl_login`
+  ADD CONSTRAINT `FK_RELATIONSHIP_5` FOREIGN KEY (`id_level`) REFERENCES `tbl_level` (`id_level`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tbl_musahil`
+--
+ALTER TABLE `tbl_musahil`
+  ADD CONSTRAINT `FK_RELATIONSHIP_16` FOREIGN KEY (`username`) REFERENCES `tbl_login` (`username`),
+  ADD CONSTRAINT `tbl_musahil_ibfk_1` FOREIGN KEY (`nim_musahil`) REFERENCES `tbl_pendaftaran` (`nim`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tbl_orangtua`
+--
+ALTER TABLE `tbl_orangtua`
+  ADD CONSTRAINT `FK_RELATIONSHIP_11` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`);
+
+--
+-- Constraints for table `tbl_organisasi`
+--
+ALTER TABLE `tbl_organisasi`
+  ADD CONSTRAINT `FK_RELATIONSHIP_9` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tbl_pendaftaran`
+--
+ALTER TABLE `tbl_pendaftaran`
+  ADD CONSTRAINT `FK_RELATIONSHIP_1` FOREIGN KEY (`id_kelamin`) REFERENCES `tbl_kelamin` (`id_kelamin`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_RELATIONSHIP_2` FOREIGN KEY (`id_jalurmasuk`) REFERENCES `tbl_jalurmasuk` (`id_jalurmasuk`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_RELATIONSHIP_3` FOREIGN KEY (`id_jurusan`) REFERENCES `tbl_jurusan` (`id_jurusan`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_RELATIONSHIP_6` FOREIGN KEY (`username`) REFERENCES `tbl_login` (`username`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tbl_penghuni_tetap`
+--
+ALTER TABLE `tbl_penghuni_tetap`
+  ADD CONSTRAINT `tbl_penghuni_tetap_ibfk_1` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`),
+  ADD CONSTRAINT `tbl_penghuni_tetap_ibfk_2` FOREIGN KEY (`kamar`) REFERENCES `tbl_kamar` (`id_kamar`);
+
+--
+-- Constraints for table `tbl_prestasi`
+--
+ALTER TABLE `tbl_prestasi`
+  ADD CONSTRAINT `FK_RELATIONSHIP_8` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`);
+
+--
+-- Constraints for table `tbl_riwayatpendidikan`
+--
+ALTER TABLE `tbl_riwayatpendidikan`
+  ADD CONSTRAINT `FK_RELATIONSHIP_12` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`),
+  ADD CONSTRAINT `FK_RELATIONSHIP_17` FOREIGN KEY (`id_pendidikan`) REFERENCES `tbl_pendidikan` (`id_pendidikan`);
+
+--
+-- Constraints for table `tbl_riwayatsakit`
+--
+ALTER TABLE `tbl_riwayatsakit`
+  ADD CONSTRAINT `FK_RELATIONSHIP_10` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`);
+
+--
+-- Constraints for table `tbl_validasiberkas`
+--
+ALTER TABLE `tbl_validasiberkas`
+  ADD CONSTRAINT `FK_RELATIONSHIP_15` FOREIGN KEY (`nim`) REFERENCES `tbl_pendaftaran` (`nim`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

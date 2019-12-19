@@ -65,7 +65,10 @@ $mylevel = "Admin";
                                         <?= $pend->ket_jurusan?>
                                     </td>
                                     <td>
-                                        <?php if($pend->masuk == "NOT"){echo "<i class='text text-warning'>Belum Dapat Kamar</i>";}else{echo "<i class='text text-success '>Sudah Dapat Kamaar</i>";}?>
+                                        <?php if($pend->masuk == "NOT"){echo "<i class='text text-warning'>Belum Dapat Kamar</i>";}
+                                        else{
+                                            echo "<i class='text text-success '>Sudah Dapat Kamaar <br>
+                                            <a href='".base_url($mylevel.'/cetak_bukti/'.$pend->nim)."' >Cetak Bukti</a></i>";}?>
                                     </td>
                                     <?php if ($level=="1337") { ?>
                                     <td>

@@ -158,8 +158,18 @@ class Musahil extends CI_Controller
             ");
             redirect($this->cek_level()."/edit_profile");
         }
+
+       
     }
-
-
+    
+    public function cetak_bukti($nim){
+        $this->cek_session();
+        $data['menu'] = "Bukti Pendaftaran";
+        $data['level'] = $this->session->userdata('id_level');
+        $data['user'] = $this->am->get_data_login($this->session->userdata('username'));
+        $data['nim'] = $nim;
+        $data['bukti'] = $this->am->get_penghuni_detail($nim);
+        $this->load->view("Admin/bukti",$data);      
+    }
 
 }
